@@ -88,7 +88,7 @@ namespace bitwz
         /// </summary>
         /// <param name="dividend">Dividend value.</param>
         /// <param name="divisor">Divisor value.</param>
-        /// <returns>Returns the real remainder after division (modulo operation)</returns>
+        /// <returns>Returns the real remainder after division (modulo operation).</returns>
         private static int mod(int dividend, int divisor) => dividend - divisor * (int)floor((double)dividend / divisor);
 
         /// <summary>
@@ -96,7 +96,7 @@ namespace bitwz
         /// </summary>
         /// <param name="dividend">Dividend value.</param>
         /// <param name="divisor">Divisor value.</param>
-        /// <returns>Returns the real remainder after division (modulo operation)</returns>
+        /// <returns>Returns the real remainder after division (modulo operation).</returns>
         private static long mod(long dividend, long divisor) => dividend - divisor * (long)floor((double)dividend / divisor);
 
         /// <summary>
@@ -104,7 +104,7 @@ namespace bitwz
         /// </summary>
         /// <param name="dividend">Dividend value.</param>
         /// <param name="divisor">Divisor value.</param>
-        /// <returns>Returns the remainder after division (modulo operation)</returns>
+        /// <returns>Returns the remainder after division (modulo operation).</returns>
         private static double mod(double dividend, double divisor) => dividend - divisor * floor(dividend / divisor);
     }
 }
