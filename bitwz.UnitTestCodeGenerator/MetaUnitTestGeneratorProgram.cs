@@ -61,31 +61,6 @@ namespace bitwz.CodeGenerator
                 }
             }
 
-            // Bitwise NOT (ugly/old code) - 1 in/out:
-            /*
-            StringBuilder b1 = new StringBuilder();
-            StringBuilder b2 = new StringBuilder();
-            StringBuilder b3 = new StringBuilder();
-            StringBuilder b4 = new StringBuilder();
-            foreach (int i in Int32Numbers)
-            {
-                b1.AppendLine("//Assert.AreEqual(~" + (i < 0 ? "(" + i + ")" : i.ToString()) + ", " + ~i + ");");
-                b2.AppendLine("Assert.AreEqual(bNot(" + i + "), " + ~i + ");");
-                b3.AppendLine("//Assert.That(~" + (i < 0 ? "(" + i + ")" : i.ToString()) + ", Is.EqualTo(" + ~i + "));");
-                b4.AppendLine("Assert.That(bNot(" + i + "), Is.EqualTo(" + ~i + "));");
-            }
-            Console.WriteLine("#if USE_MSUNIT");
-            Console.Write(b1.ToString());
-            Console.Write(b2.ToString());
-            Console.WriteLine("#elif USE_NUNIT");
-            Console.Write(b3.ToString());
-            Console.Write(b4.ToString());
-            Console.WriteLine("#elif USE_XUNIT");
-            Console.Write(b1.ToString().Replace(".AreEqual", ".Equal"));
-            Console.Write(b2.ToString().Replace(".AreEqual", ".Equal"));
-            Console.WriteLine("#endif");
-            */
-
             //Console.Read();
             return 0;
         }
