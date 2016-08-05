@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using bitwz.CodeGenerator.Bitwise;
 using bitwz.CodeGenerator.UnitTest;
 using JetBrains.Annotations;
 
-namespace bitwz.CodeGenerator.Bitwise
+namespace bitwz.CodeGenerator
 {
     internal static class Utility
     {
