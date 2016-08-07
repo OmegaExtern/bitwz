@@ -4,14 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{AF9F4035-262C-4DCA-96F1-73CD0AF986F4}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <ProjectGuid>{2E887966-6786-4E0B-B30F-8537E8794607}</ProjectGuid>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>bitwz.CodeGenerator</RootNamespace>
-    <AssemblyName>bitwz.UnitTestCodeGenerator</AssemblyName>
+    <RootNamespace>bitwz</RootNamespace>
+    <AssemblyName>bitwz</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -20,8 +21,13 @@
     <Optimize>false</Optimize>
     <OutputPath>bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
+    <ErrorReport>none</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+    <Prefer32Bit>false</Prefer32Bit>
+    <DocumentationFile>bin\Debug\bitwz.XML</DocumentationFile>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <LangVersion>6</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -31,57 +37,59 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <DocumentationFile>bin\Release\bitwz.XML</DocumentationFile>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <LangVersion>6</LangVersion>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
   </PropertyGroup>
   <PropertyGroup>
-    <TargetZone>LocalIntranet</TargetZone>
+    <StartupObject>
+    </StartupObject>
   </PropertyGroup>
   <PropertyGroup>
-    <GenerateManifests>false</GenerateManifests>
+    <SignAssembly>false</SignAssembly>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="JetBrains.Annotations">
-      <HintPath>..\..\packages\JetBrains.Annotations.10.1.5\lib\net\JetBrains.Annotations.dll</HintPath>
-    </Reference>
-    <Reference Include="System" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Bitwise\BitFactory.cs" />
-    <Compile Include="Bitwise\BitwiseExpression.cs" />
-    <Compile Include="Bitwise\BitwiseExtensions.cs" />
-    <Compile Include="Bitwise\BitwiseFunctionAttribute.cs" />
-    <Compile Include="Bitwise\BitwiseMethodType.cs" />
-    <Compile Include="Bitwise\ExpressionKind.cs" />
-    <Compile Include="Bitwise\IBitFunction.cs" />
-    <Compile Include="Bitwise\IBitOperationMethod.cs" />
-    <Compile Include="Bitwise\IBitUnaryFunction.cs" />
-    <Compile Include="Bitwise\TypeExtensions.cs" />
-    <Compile Include="MetaUnitTestGeneratorProgram.cs" />
+    <Compile Include="BitwiseAnd.cs" />
+    <Compile Include="BitwiseLeftShift.cs" />
+    <Compile Include="BitwiseNot.cs" />
+    <Compile Include="BitwiseOr.cs" />
+    <Compile Include="BitwiseRightShift.cs" />
+    <Compile Include="BitwiseXor.cs" />
+    <Compile Include="BitwzMath.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TypeExtensions.cs" />
-    <Compile Include="UnitTest\EngineFactory.cs" />
-    <Compile Include="UnitTest\EngineType.cs" />
-    <Compile Include="UnitTest\IUnitTestEngine.cs" />
-    <Compile Include="UnitTest\MsUnitEngine.cs" />
-    <Compile Include="UnitTest\NUnitEngine.cs" />
-    <Compile Include="UnitTest\UnitTestEngine.cs" />
-    <Compile Include="UnitTest\UnitTestEngineAttribute.cs" />
-    <Compile Include="UnitTest\UnitTestExtensions.cs" />
-    <Compile Include="UnitTest\XUnitEngine.cs" />
-    <Compile Include="Utility.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-    <None Include="packages.config" />
-    <None Include="Properties\app.manifest" />
+    <Reference Include="System" />
+    <Reference Include="System.Drawing" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\bitwz\bitwz.csproj">
-      <Project>{2e887966-6786-4e0b-b30f-8537e8794607}</Project>
-      <Name>bitwz</Name>
-    </ProjectReference>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BitwiseAnd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BitwiseNot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BitwiseOr.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BitwiseXOr.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

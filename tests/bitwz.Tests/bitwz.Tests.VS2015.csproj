@@ -79,7 +79,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\src\bitwz\bitwz.csproj">
+    <ProjectReference Include="..\..\src\bitwz\bitwz.VS2015.csproj">
       <Project>{2e887966-6786-4e0b-b30f-8537e8794607}</Project>
       <Name>bitwz</Name>
     </ProjectReference>
