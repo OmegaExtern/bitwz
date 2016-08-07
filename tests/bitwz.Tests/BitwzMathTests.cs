@@ -17,7 +17,7 @@ namespace bitwz.Tests
 #endif
     public class BitwzMathTests
     {
-        private const double FloorDoubleDelta = 0.0004, FloorDoubleExpectedResult = -2500;
+        private const double FloorDoubleDelta = 0.0004, FloorDoubleExpectedResult = -2500.0;
 
 #if USE_MSUNIT
         [TestMethod]

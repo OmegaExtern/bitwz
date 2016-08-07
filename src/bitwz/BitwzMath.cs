@@ -56,33 +56,6 @@ namespace bitwz
         //    return l > d ? l - 1 : l;
         //}
 
-        // pow is not needed any more as it uses pre-compiled array (Pow2).
-        //private static int pow(int value, int y)
-        //{
-        //    int result = value;
-        //    for (int i = y; i > 1; --i)
-        //    {
-        //        result *= value;
-        //    }
-        //    return result;
-        //}
-
-        /// <summary>
-        ///     Normalizes a number to the numeric range of bit operations.
-        /// </summary>
-        /// <param name="value">A number to be normalized.</param>
-        /// <returns>A value that has been normalized to the numeric range of bit operations.</returns>
-        private static long tobit(long value)
-        {
-            value = mod(value, MOD);
-            if (value < 0x80000000L)
-            {
-                return value;
-            }
-
-            return value - MOD;
-        }
-
         /// <summary>
         ///     Computes the remainder after dividing its first operand by its second.
         /// </summary>
