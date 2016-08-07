@@ -83,13 +83,13 @@
     <None Include="Resources\BitwiseAnd.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\BitwiseNot.png" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include="Resources\BitwiseOr.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\BitwiseXOr.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\BitwiseNot.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
