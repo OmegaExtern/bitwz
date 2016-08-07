@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "bitwz", "src\bitwz\bitwz.VS2015.csproj", "{2E887966-6786-4E0B-B30F-8537E8794607}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "bitwz.VS2015.NET20", "src\bitwz\bitwz.VS2015.NET20.csproj", "{2E887966-6786-4E0B-B30F-8537E8794607}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "bitwz.Tests", "tests\bitwz.Tests\bitwz.Tests.VS2015.csproj", "{19EB0AB5-612C-4C7A-AB43-3E6E706D72E5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "bitwz.VS2015.NET45", "src\bitwz\bitwz.VS2015.NET45.csproj", "{7D5E1B11-E924-4E98-8C02-FB1900EA12EF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "bitwz.UnitTestCodeGenerator", "src\bitwz.UnitTestCodeGenerator\bitwz.UnitTestCodeGenerator.VS2015.csproj", "{AF9F4035-262C-4DCA-96F1-73CD0AF986F4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "bitwz.Tests.VS2015", "tests\bitwz.Tests\bitwz.Tests.VS2015.csproj", "{19EB0AB5-612C-4C7A-AB43-3E6E706D72E5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "bitwz.UnitTestCodeGenerator.VS2015", "src\bitwz.UnitTestCodeGenerator\bitwz.UnitTestCodeGenerator.VS2015.csproj", "{AF9F4035-262C-4DCA-96F1-73CD0AF986F4}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{6FE28764-470B-4AE0-A598-4392610D61E5}"
 	ProjectSection(SolutionItems) = preProject
@@ -29,6 +31,10 @@ Global
 		{2E887966-6786-4E0B-B30F-8537E8794607}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2E887966-6786-4E0B-B30F-8537E8794607}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2E887966-6786-4E0B-B30F-8537E8794607}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D5E1B11-E924-4E98-8C02-FB1900EA12EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D5E1B11-E924-4E98-8C02-FB1900EA12EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D5E1B11-E924-4E98-8C02-FB1900EA12EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D5E1B11-E924-4E98-8C02-FB1900EA12EF}.Release|Any CPU.Build.0 = Release|Any CPU
 		{19EB0AB5-612C-4C7A-AB43-3E6E706D72E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{19EB0AB5-612C-4C7A-AB43-3E6E706D72E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{19EB0AB5-612C-4C7A-AB43-3E6E706D72E5}.Release|Any CPU.ActiveCfg = Release|Any CPU

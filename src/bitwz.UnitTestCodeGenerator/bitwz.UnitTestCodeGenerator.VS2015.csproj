@@ -78,8 +78,8 @@
     <None Include="Properties\app.manifest" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\bitwz\bitwz.VS2015.csproj">
-      <Project>{2e887966-6786-4e0b-b30f-8537e8794607}</Project>
+    <ProjectReference Include="..\bitwz\bitwz.VS2015.NET45.csproj">
+      <Project>{7D5E1B11-E924-4E98-8C02-FB1900EA12EF}</Project>
       <Name>bitwz</Name>
     </ProjectReference>
   </ItemGroup>

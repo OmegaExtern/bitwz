@@ -1,5 +1,7 @@
 using System;
+#if NET_45
 using System.Runtime.CompilerServices;
+#endif
 
 namespace bitwz
 {
@@ -16,7 +18,7 @@ namespace bitwz
         ///     Number of bits in a byte.
         /// </summary>
         private const byte BITS = 8;
-        private const long MOD = 4294967296L, MODM = 4294967295L;
+        private const long MOD = 4294967296L;
         /// <summary>
         ///     Pre-compiled "Pow(2, n)" array where n is in range from 0 to 31.
         ///     <para />
@@ -43,7 +45,9 @@ namespace bitwz
         ///     The largest integer less than or equal to d. If d is equal to <see cref="double.NaN" />,
         ///     <see cref="double.NegativeInfinity" />, or <see cref="double.PositiveInfinity" />, that value is returned.
         /// </returns>
+#if NET_45
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
+#endif
         public static double floor(double d) => Math.Floor(d);
 
         //public static double floor(double d)
