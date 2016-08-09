@@ -72,6 +72,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="BitwzInt32Tests.cs" />
     <Compile Include="BitwzMathTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -79,8 +80,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\src\bitwz\bitwz.VS2015.NET45.csproj">
-      <Project>{7D5E1B11-E924-4E98-8C02-FB1900EA12EF}</Project>
+    <ProjectReference Include="..\..\src\bitwz\bitwz.VS2015.csproj">
+      <Project>{2E887966-6786-4E0B-B30F-8537E8794607}</Project>
       <Name>bitwz</Name>
     </ProjectReference>
   </ItemGroup>

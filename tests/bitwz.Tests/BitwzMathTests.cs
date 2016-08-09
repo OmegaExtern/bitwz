@@ -4,9 +4,14 @@ using NUnit.Framework;
 #elif USE_XUNIT
 using Xunit;
 #else
+#if !USE_MSUNIT
+#define USE_MSUNIT
+#endif
 using Microsoft.VisualStudio.TestTools.UnitTesting; // Use MSUnit.
 #endif
 using static bitwz.BitwzMath;
+
+// ReSharper disable ClassCanBeSealed.Global
 
 namespace bitwz.Tests
 {

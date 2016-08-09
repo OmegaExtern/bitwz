@@ -1,7 +1,5 @@
 using System;
-#if NET_45
-using System.Runtime.CompilerServices;
-#endif
+using JetBrains.Annotations;
 
 namespace bitwz
 {
@@ -45,9 +43,6 @@ namespace bitwz
         ///     The largest integer less than or equal to d. If d is equal to <see cref="double.NaN" />,
         ///     <see cref="double.NegativeInfinity" />, or <see cref="double.PositiveInfinity" />, that value is returned.
         /// </returns>
-#if NET_45
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
-#endif
         public static double floor(double d) => Math.Floor(d);
 
         //public static double floor(double d)
@@ -59,6 +54,18 @@ namespace bitwz
         //    double l = (long)d;
         //    return l > d ? l - 1 : l;
         //}
+
+        [NotNull]
+        internal static bool[] toBits(int value)
+        {
+            bool[] result = new bool[sizeof(int) * BITS];
+            for (byte i = 0; i < result.Length; ++i)
+            {
+                result[i] = mod((long)floor((double)value / Pow2[i]), 2L) == 1L;
+            }
+
+            return result;
+        }
 
         /// <summary>
         ///     Computes the remainder after dividing its first operand by its second.
